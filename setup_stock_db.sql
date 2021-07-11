@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS market, stock, daily_price;
+
 CREATE TABLE market (
     id BIGSERIAL NOT NULL PRIMARY KEY,
     market_name VARCHAR(50) NOT NULL  
@@ -21,6 +22,4 @@ CREATE TABLE daily_price (
     low NUMERIC(20,3) NOT NULL,
     FOREIGN KEY (stock_id) REFERENCES stock(id) ON DELETE restrict
 );
-
-
 
